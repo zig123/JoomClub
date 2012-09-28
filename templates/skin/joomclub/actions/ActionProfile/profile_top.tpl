@@ -34,11 +34,11 @@
 																		vote-nobuttons
 																	{/if}">
             <i class="icon-synio-rating"></i>
-			<div class="vote-item vote-down" onclick="return ls.vote.vote({$oUserProfile->getId()},this,-1,'user');"><span><i class="icon-down"></i></span></div>
+			<div class="vote-item vote-down" onclick="return ls.vote.vote({$oUserProfile->getId()},this,-1,'user');"><span><i class="ico-down"></i></span></div>
 			<div class="vote-item vote-count" title="{$aLang.user_vote_count}: {$oUserProfile->getCountVote()}">
 				<span id="vote_total_user_{$oUserProfile->getId()}">{if $oUserProfile->getRating() > 0}+{/if}{$oUserProfile->getRating()}</span>
 			</div>
-			<div class="vote-item vote-up" onclick="return ls.vote.vote({$oUserProfile->getId()},this,1,'user');"><span><i class="icon-up"></i></span></div>
+			<div class="vote-item vote-up" onclick="return ls.vote.vote({$oUserProfile->getId()},this,1,'user');"><span><i class="ico-up"></i></span></div>
 		</div>
 	</div>
     <div class="cls"></div>
