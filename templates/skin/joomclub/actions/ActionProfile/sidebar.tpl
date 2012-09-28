@@ -19,18 +19,18 @@
 			<a href="#" id="foto-remove" class="btn btn-primary" onclick="return ls.user.removeFoto();" style="{if !$oUserCurrent->getProfileFoto()}display:none;{/if}">{$aLang.settings_profile_foto_delete}</a>
 		</p>
 
-		<div class="modal modal-upload-photo" id="foto-resize">
+		<div class="modal modal-upload-photo" id="foto-resize" style="z-index: 1050; display: none;">
 			<header class="modal-header">
 				<h3>{$aLang.settings_profile_avatar_resize_title}</h3>
 			</header>
-			
+
 			<div class="modal-content">
 				<div class="clearfix">
 					<div class="image-border">
 						<img src="" alt="" id="foto-resize-original-img">
 					</div>
 				</div>
-				
+
 				<button type="submit"  class="button button-primary" onclick="return ls.user.resizeFoto();">{$aLang.settings_profile_avatar_resize_apply}</button>
 				<button type="submit"  class="button" onclick="return ls.user.cancelFoto();">{$aLang.settings_profile_avatar_resize_cancel}</button>
 			</div>

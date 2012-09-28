@@ -37,12 +37,12 @@
 				<a href="#" id="avatar-upload" class="link-dotted">{if $oUserCurrent->getProfileAvatar()}{$aLang.settings_profile_avatar_change}{else}{$aLang.settings_profile_avatar_upload}{/if}</a><br />
 				<a href="#" id="avatar-remove" class="link-dotted" onclick="return ls.user.removeAvatar();" style="{if !$oUserCurrent->getProfileAvatar()}display:none;{/if}">{$aLang.settings_profile_avatar_delete}</a>
 			</div>
-			
-			<div id="avatar-resize" class="modal modal-upload-avatar">
+
+			<div id="avatar-resize" class="modal modal-upload-avatar" style="z-index: 1050; display: none;">
 				<header class="modal-header">
 					<h3>{$aLang.settings_profile_avatar_resize_title}</h3>
 				</header>
-				
+
 				<div class="modal-content">
 					<div class="clearfix">
 						<div class="image-border">
