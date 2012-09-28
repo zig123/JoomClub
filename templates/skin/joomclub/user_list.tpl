@@ -18,10 +18,10 @@
           <div class="user-list-item-details">
             {if ($oUserList->getProfileCountry() || $oUserList->getProfileCity())}
               {if $oUserList->getProfileCountry()}
-                <a href="{router page='people'}country/{$oUserList->getProfileCountry()|escape:'html'}/">{$oUserList->getProfileCountry()|escape:'html'}</a>{if $oUserList->getProfileCity()},{/if}
+                <a href="{router page='people'}country/{$oUserList->_getDataOne('geo_target')->_getDataOne('country_id')|escape:'html'}/">{$oUserList->getProfileCountry()|escape:'html'}</a>{if $oUserList->getProfileCity()},{/if}
               {/if}
               {if $oUserList->getProfileCity()}
-                <a href="{router page='people'}city/{$oUserList->getProfileCity()|escape:'html'}/">{$oUserList->getProfileCity()|escape:'html'}</a>
+                <a href="{router page='people'}city/{$oUserList->_getDataOne('geo_target')->_getDataOne('city_id')|escape:'html'}/">{$oUserList->getProfileCity()|escape:'html'}</a>
               {/if}
             {/if}
             <div>
