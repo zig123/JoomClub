@@ -1,0 +1,21 @@
+ul.cause-list {
+    padding: 5px 10px; background: #fcfcfc; border-radius: 5px; font-size: 9px;
+}
+ul.cause-list li {
+    border-bottom: solid 1px #fef1ec; padding: 5px 10px; position: relative;
+}
+ul.cause-list li span.text{
+
+}
+ul.cause-list li span.date{
+
+}
+ul.cause-list li span.login{
+
+}
+ul.cause-list li .delete{
+    color: red; position: absolute; top: -5px; right: -5px;
+}
+.cause-title{
+    font-size: 18px; margin-top: 10px;
+}

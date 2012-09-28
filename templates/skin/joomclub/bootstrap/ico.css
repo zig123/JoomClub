@@ -1,0 +1,25 @@
+/* icon */
+.ico-jcolor, .ico-jblack, .ico-jwhite, .ico-lang, .ico-com, .ico-mod, .ico-plugin, .ico-tmpl, .ico-esp, .ico-comments, .ico-up, .ico-down, .ico-privatmessages, .ico-heart, .ico-userprofile,
+.ico-settings, .ico-file, .ico-off, .ico-vk, .ico-fb, .ico-tw, .ico-link  { background: url(../images/icon/icons.png)!important; width: 14px; height: 14px; display: inline-block; }
+.ico-jcolor { background-position: 0px 0px!important }
+.ico-jblack { background-position: 0px -14px!important }
+.ico-jwhite { background-position: 0px -28px!important }
+.ico-com { background-position: 0px -42px!important }
+.ico-mod { background-position: 0px -56px!important }
+.ico-plugin { background-position: 0px -70px!important }
+.ico-lang { background-position: 0px -84px!important }
+.ico-tmpl { background-position: 0px -98px!important }
+.ico-esp { background-position: 0px -112px!important }
+.ico-comments { background-position: 0px -126px!important }
+.ico-up { background-position: 0px -154px!important }
+.ico-down { background-position: 0px -140px!important }
+.ico-privatmessages { background-position: 0px -238px!important }
+.ico-heart { background-position: 0px -280px!important }
+.ico-userprofile { background-position: 0px -168px!important }
+.ico-settings { background-position: 0px -210px!important }
+.ico-file { background-position: 0px -266px!important }
+.ico-off { background-position: 0px -224px!important }
+.ico-vk { background-position: 0px -336px!important }
+.ico-fb { background-position: 0px -322px!important }
+.ico-tw { background-position: 0px -308px!important }
+.ico-link { background-position: 0px -294px!important }

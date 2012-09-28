@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin>
+  <name>
+    <lang name="default">Topic signature</lang>
+  </name>
+  <author>
+    <lang name="default">PSNet</lang>
+  </author>
+  <homepage>http://psnet.lookformp3.net</homepage>
+  <version>1.1.0</version>
+  <requires>
+    <livestreet>1.0</livestreet>
+    <plugins></plugins>
+  </requires>
+  <description>
+    <lang name="default">Adds text signature below topic for selected users. Setting all parameters in config file.</lang>
+    <lang name="russian">Добавляет подпись под топиком для заданных в конфиге пользователей.</lang>
+  </description>
+</plugin>

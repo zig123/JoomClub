@@ -1,0 +1,36 @@
+/* ============   Spoiler       ============ */
+.sp-wrap {
+    background: none repeat scroll 0 0 #E9E9E6;
+    border-color: #C3CBD1;
+    border-style: solid;
+    border-width: 1px 1px 1px 2px;
+    margin: 6px;
+    width: 90%;
+}
+.sp-head {
+   cursor: pointer;
+   color: #343434;
+   font-size: 11px;
+   line-height: 15px;
+   margin-left: 6px;
+   padding: 1px 14px 3px;
+   width: 97%;
+}
+.sp-body {
+   background: none repeat scroll 0 0 #f4f4f4;
+   border-top: 1px solid #ccc;
+   line-height: 17px;
+   padding: 3px 3px 3px 7px;
+   font-size: 12px;
+   color: #343434;
+}
+
+.folded {
+   display: block;
+   padding-left: 14px;
+}
+
+.unfolded {
+   display: block;
+   padding-left: 14px;
+}

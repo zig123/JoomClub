@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin>
+  <name>
+    <lang name="default">Similar topics in popup</lang>
+  </name>
+  <author>
+    <lang name="default">PSNet</lang>
+  </author>
+  <homepage>http://psnet.lookformp3.net</homepage>
+  <version>1.2.0</version>
+  <requires>
+    <livestreet>1.0</livestreet>
+    <plugins></plugins>
+  </requires>
+  <description>
+    <lang name="default">Shows similar topics in popup window.</lang>
+    <lang name="russian">При просмотре топика до конца выводит похожие топики (на основе тегов) в вылезающем справа окошке.</lang>
+  </description>
+</plugin>

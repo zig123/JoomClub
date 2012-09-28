@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin>
+  <name>
+    <lang name="default">Search Auto Completer</lang>
+  </name>
+  <author>
+    <lang name="default">PSNet</lang>
+  </author>
+  <homepage>http://psnet.lookformp3.net</homepage>
+  <version>1.2.0</version>
+  <requires>
+    <livestreet>1.0</livestreet>
+    <plugins></plugins>
+  </requires>
+  <description>
+    <lang name="default">Autocompleter (auto suggest) for search field.</lang>
+    <lang name="russian">Автозаполнение (автокомплитер) по тегам для поля поиска.</lang>
+  </description>
+</plugin>

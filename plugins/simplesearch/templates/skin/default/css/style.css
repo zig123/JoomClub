@@ -1,0 +1,88 @@
+/*
+  Simplesearch plugin
+  (P) PSNet, 2008 - 2012
+  http://psnet.lookformp3.net/
+  http://livestreet.ru/profile/PSNet/
+  http://livestreetcms.com/profile/PSNet/
+*/
+
+/* block for people page */
+
+div.block.SS_Peoplesearch form {
+  margin-bottom: 5px;
+}
+
+div.block.SS_Peoplesearch form label {
+  color: #555555;
+  display: block;
+  margin: 5px 0;
+}
+
+div.block.SS_Peoplesearch form label input {
+  margin: 0 5px 0 0;
+  vertical-align: sub;
+}
+
+div.block.SS_Peoplesearch small {
+  color: #999999;
+  font: 10px/12px Tahoma,Verdana;
+}
+
+/* search results */
+
+div.SearchContainer {}
+
+/* people spoiler */
+
+div.SearchContainer div.FoundBy {
+  font-size: 10px;
+  text-decoration: underline;
+  cursor: pointer;
+  clear: both;
+  color: green;
+}
+
+div.SearchContainer div.FoundBy:hover {
+  text-decoration: none;
+}
+
+div.SearchContainer div.MoreInfo {
+  display: none;
+  background: #EEEEEE;
+  border-left: 2px solid #3F8AD7;
+  padding: 0 5px;
+}
+
+/* topics info */
+
+div.SearchContainer div.TitleWhereFound {
+  background: -moz-linear-gradient(left,  rgba(125,185,232,0.1) 0%, rgba(229,229,229,0) 100%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(125,185,232,0.1)), color-stop(100%,rgba(229,229,229,0)));
+  background: -webkit-linear-gradient(left,  rgba(125,185,232,0.1) 0%,rgba(229,229,229,0) 100%);
+  background: -o-linear-gradient(left,  rgba(125,185,232,0.1) 0%,rgba(229,229,229,0) 100%);
+  background: -ms-linear-gradient(left,  rgba(125,185,232,0.1) 0%,rgba(229,229,229,0) 100%);
+  background: linear-gradient(left,  rgba(125,185,232,0.1) 0%,rgba(229,229,229,0) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1a7db9e8', endColorstr='#00e5e5e5',GradientType=1 );
+  
+  border-radius: 2px 2px 2px 2px;
+  color: #555555;
+  font: 13px/18px Verdana, Tahoma;
+  padding: 3px 5px;
+  text-shadow: 0 1px 0 #FFFFFF;
+  margin: 2px 0 8px;
+}
+
+/* highlight search results */
+
+.searched-item{
+  background: rgba(125, 185, 232, 0.3);
+  font-weight:bold;
+}
+
+
+
+
+
+
+
+

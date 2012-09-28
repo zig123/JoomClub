@@ -1,0 +1,104 @@
+<?php
+
+/* ========================================================
+ *
+ *   LiveStreet (0.5x)
+ *   Copyright © 2012 Zharina Viktor
+ *
+ * ========================================================
+ *
+ *   Site: http://viktor.zharina.info
+ *   Contact e-mail: viktorz1986@gmail.com
+ *
+ * ========================================================
+ */
+
+class PluginImperavi_ModuleText extends PluginImperavi_Inherit_ModuleText
+{
+
+    public function Init() {
+		parent::Init();
+
+		$this->oJevix->cfgAllowTags(array('p','div','strike', 'table','tbody','thead', 'tr','td','th'));
+		$this->oJevix->cfgAllowTagParams('div', array('class','title'));
+
+		$this->oJevix->cfgSetAutoBrMode(false);
+		$this->oJevix->cfgSetTagNoAutoBr(array('div','table','tr','td','th'));
+
+    }
+
+    /**
+	 * Парсит текст
+	 *
+	 * @param string $sText
+	 */
+	public function Parser($sText) {
+		$sResult = parent::Parser($sText);
+		$sResult = $this->LsUserParser($sResult);
+		//echo 'RESULT'.$sResult;
+		return $sResult;
+	}
+
+    public function LsUserParser($sText) {
+    	//echo "ACTUNG";
+		$sResult = str_replace('<a href="#" title="lsuser" rel="nofollow">lsuser</a>','',$sText);
+		return $sResult;
+	}
+
+    /**
+	 * Производить резрезание текста по тегу <cut>.
+	 * Возвращаем массив вида:
+	 * array(
+	 * 		$sTextShort - текст до тега <cut>
+	 * 		$sTextNew   - весь текст за исключением удаленного тега
+	 * 		$sTextCut   - именованное значение <cut> 
+	 * )
+	 *
+	 * @param  string $sText
+	 * @return array
+	 */
+	public function Cut($sText) {
+		$sTextShort = $sText;
+		$sTextNew   = $sText;
+		$sTextCut   = null;
+		
+		$sTextTemp=str_replace("\r\n",'[<rn>]',$sText);
+		$sTextTemp=str_replace("\n",'[<n>]',$sTextTemp);
+		
+		if (preg_match("/^(.*)<cut(.*)>(.*)$/Ui",$sTextTemp,$aMatch)) {			
+			$aMatch[1]=str_replace('[<rn>]',"\r\n",$aMatch[1]);
+			$aMatch[1]=str_replace('[<n>]',"\r\n",$aMatch[1]);
+			$aMatch[3]=str_replace('[<rn>]',"\r\n",$aMatch[3]);
+			$aMatch[3]=str_replace('[<n>]',"\r\n",$aMatch[3]);
+			$sTextShort=$aMatch[1];
+			$aMatch[3] = str_replace('===Читать далее===',"",$aMatch[3]);
+
+			$sTextNew=$aMatch[1].' <a name="cut"></a> '.$aMatch[3];
+			if (preg_match('/^\s*name\s*=\s*"(.+)"\s*\/?$/Ui',$aMatch[2],$aMatchCut)) {				
+				$sTextCut=trim($aMatchCut[1]);
+			}				
+		}
+
+		return array($sTextShort,$sTextNew,$sTextCut ? htmlspecialchars($sTextCut) : null);
+	}
+
+	/**
+	 * Обработка тега <ls> в тексте
+	 *
+	 * @param unknown_type $sTag
+	 * @param unknown_type $aParams
+	 * @return unknown
+	 */
+	public function CallbackTagLs($sTag,$aParams) {
+		$sText='';
+		if (isset($aParams['user'])) {
+			if ($oUser=$this->User_getUserByLogin($aParams['user'])) {
+				$sText.="<a href=\"{$oUser->getUserWebPath()}\" class=\"ls-user\">{$oUser->getLogin()}</a> ";
+			}
+		}
+		return $sText;
+	}
+
+}
+
+?>

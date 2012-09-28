@@ -1,0 +1,19 @@
+AddDefaultCharset UTF-8
+Options -Indexes
+RewriteEngine On
+
+RewriteCond %{HTTP_HOST} ^www.joomclub\.net$ [NC]
+RewriteRule ^(.*)$ http://joomclub.net/$1 [R=301,L]
+
+#RewriteBase /
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ ./index.php
+# Alternative rule
+#RewriteRule ^(.*)$ /index.php
+
+<Files "plugins.dat">
+order allow,deny
+deny from all
+</Files>
+

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin>
+	<name>
+		<lang name="default">Last user comments</lang>
+	</name>
+	<author>
+		<lang name="default"></lang>
+	</author>
+	<homepage></homepage>
+	<version>1.0</version>
+	<requires>
+		<livestreet>1.0.1</livestreet>
+		<plugins></plugins>
+	</requires>
+	<description>
+      <lang name="default">Shows last titles of topics and comments in user`s profile in tabs.</lang>
+	  <lang name="russian">Выводит в профиле последние комментарии пользователя.</lang>
+	</description>
+</plugin>

@@ -1,0 +1,65 @@
+.ub_info_text{
+	color: #333;
+	font-size: 10px;
+}
+
+.ub_info_requestforoutputdisabled{
+	color: #ff8080;
+	font-size: 10px;
+}
+
+
+#ub_table
+{
+	font-size: 10px;
+	width: 100%;
+	text-align: left;
+	border-collapse: collapse;
+}
+#ub_table th
+{
+	font-size: 12px;
+	font-weight: normal;
+	padding: 12px 15px;
+	color: #039;
+}
+#ub_table td
+{
+	padding: 10px 15px;
+	color: #669;
+	border-top: 1px solid #e8edff;
+}
+#ub_table: tr:hover td
+{
+	color: #339;
+	background: #b3d9ff;
+}
+
+#blogers {
+
+}
+#cont {
+	width:240px;
+	height:125px;
+}
+
+#ava{
+	float:left;
+	background: #fff url(../img/back.jpg) repeat-y;
+	padding:10px;	
+	margin-right:10px;
+	height:100px;
+}
+#b_info{
+	float:none;
+	padding:10px;
+	height:100px;
+}
+
+#b_info b {
+	display: block;
+	width: 100px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}

@@ -1,0 +1,9 @@
+.comment-info li { display: inline; list-style-type: none; margin-right: 15px }
+#comment_wrapper_id_2, #comment_wrapper_id_3, #comment_wrapper_id_4, #comment_wrapper_id_5 { margin-left: 30px }
+.comment_list_avatar { width: 60px; float: left; text-align: center }
+.comment_list_avatar img { width: 40px; height: auto; }
+.comment-content { float: left; margin-left: 10px }
+#comments section.comment { margin-bottom: 30px; }
+div.comment-wrapper { margin-left: 30px }
+.comment-info { background-color: #EEEEEE; margin-left: 0px; padding: 5px }
+

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin>
+    <name>
+        <lang name="default">Like Buttons</lang>
+        <lang name="russian">Кнопки лайков</lang>
+    </name>
+    <author>
+        <lang name="default">Arkadiy</lang>
+    </author>
+    <homepage>http://argens.ru</homepage>
+    <settings></settings>
+    <version>1</version>
+    <requires>
+        <livestreet>1.x</livestreet>
+        <plugins>
+        </plugins>
+    </requires>
+    <description>
+        <lang name="default">Like Buttons</lang>
+        <lang name="russian">Кнопки лайков в ваших материалах</lang>
+    </description>
+</plugin>

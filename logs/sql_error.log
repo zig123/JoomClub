@@ -1,0 +1,36 @@
+[2012-08-15 18:51:39][13527][5694][ERROR][SQL Error: Access denied for user 'root'@'localhost' (using password: NO) at /var/www/nightguard/data/www/joomclub.net/engine/modules/database/Database.class.php line 72<br>
+Array
+(
+    [code] => 1045
+    [message] => Access denied for user 'root'@'localhost' (using password: NO)
+    [query] => mysql_connect()
+    [context] => /var/www/nightguard/data/www/joomclub.net/engine/modules/database/Database.class.php line 72
+)
+]
+[2012-08-15 18:51:39][13527][4051][ERROR][SQL Error: Access denied for user 'root'@'localhost' (using password: NO) at /var/www/nightguard/data/www/joomclub.net/engine/modules/database/Database.class.php line 72<br>
+Array
+(
+    [code] => 1045
+    [message] => Access denied for user 'root'@'localhost' (using password: NO)
+    [query] => mysql_connect()
+    [context] => /var/www/nightguard/data/www/joomclub.net/engine/modules/database/Database.class.php line 72
+)
+]
+[2012-08-15 18:51:39][13527][8663][ERROR][SQL Error: Access denied for user 'root'@'localhost' (using password: NO) at /var/www/nightguard/data/www/joomclub.net/engine/modules/database/Database.class.php line 72<br>
+Array
+(
+    [code] => 1045
+    [message] => Access denied for user 'root'@'localhost' (using password: NO)
+    [query] => mysql_connect()
+    [context] => /var/www/nightguard/data/www/joomclub.net/engine/modules/database/Database.class.php line 72
+)
+]
+[2012-08-15 18:54:23][13527][8787][ERROR][SQL Error: Access denied for user 'root'@'localhost' (using password: NO) at /var/www/nightguard/data/www/joomclub.net/engine/modules/database/Database.class.php line 72<br>
+Array
+(
+    [code] => 1045
+    [message] => Access denied for user 'root'@'localhost' (using password: NO)
+    [query] => mysql_connect()
+    [context] => /var/www/nightguard/data/www/joomclub.net/engine/modules/database/Database.class.php line 72
+)
+]

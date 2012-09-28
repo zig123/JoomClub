@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin>
+    <name>
+        <lang name="default">Expwall</lang>
+        <lang name="russian">Expwall</lang>
+    </name>
+    <author>
+        <lang name="default"></lang>
+    </author>
+    <homepage></homepage>
+    <version>1</version>
+    <requires>
+        <livestreet>1.x</livestreet>
+        <plugins>
+        </plugins>
+    </requires>
+    <description>
+        <lang name="default">Expanded wall</lang>
+        <lang name="russian">Расширенная стена</lang>
+    </description>
+</plugin>
