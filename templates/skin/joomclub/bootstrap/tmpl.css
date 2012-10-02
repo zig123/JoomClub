@@ -171,7 +171,7 @@ footer.container { margin-top: 40px; border-top: 1px solid #CACACA; padding-top:
 
 .blog-top h2 div.btn-group { display: inline }
 
-.vote-item { display: inline }
+.vote-item { display: inline; cursor: pointer; }
 
 textarea#form_comment_text, .markItUpHeader, #page_text, #topic_text, #blog_description { width: 100%; padding: 4px!important; }
 
