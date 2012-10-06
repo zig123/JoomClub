@@ -56,7 +56,7 @@
 			{/if}
 			<li class="topic-info-separator"></li>
 			<li class="topic-info-favourite">
-				<div onclick="return ls.favourite.toggle({$oTopic->getId()},this,'topic');" class="favourite{if $oUserCurrent && $oTopic->getIsFavourite()} active{/if}"><i class="ico-heart"></i>&nbsp;&nbsp;<span class="favourite-count" id="fav_count_topic_{$oTopic->getId()}">{$oTopic->getCountFavourite()}</span></div>
+				<div onclick="return ls.favourite.toggle({$oTopic->getId()},this,'topic');" class="favourite{if $oUserCurrent && $oTopic->getIsFavourite()} active{/if}" title="{$aLang.topic_favourite_add}"><i class="ico-heart"></i>&nbsp;&nbsp;<span class="favourite-count" id="fav_count_topic_{$oTopic->getId()}">{$oTopic->getCountFavourite()}</span></div>
 			</li>
 
 			{if $oVote || ($oUserCurrent && $oTopic->getUserId() == $oUserCurrent->getId()) || strtotime($oTopic->getDateAdd()) < $smarty.now-$oConfig->GetValue('acl.vote.topic.limit_time')}

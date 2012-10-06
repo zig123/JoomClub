@@ -58,7 +58,7 @@
 						{if $iUserCurrentCountTalkNew}<div class="new">+{$iUserCurrentCountTalkNew}</div>{/if}
 					</a>
 				  </li>
-				  <li class="item-favourite"><a href="{$oUserCurrent->getUserWebPath()}favourites/topics/"><i class="ico-heart"></i> {$aLang.user_menu_profile_favourites}</a></li>
+				  <li class="item-favourite"><a href="{$oUserCurrent->getUserWebPath()}favourites/topics/" title="{$aLang.topic_favourite_add}"><i class="ico-heart"></i> {$aLang.user_menu_profile_favourites}</a></li>
 				  <li class="item-profile"><a href="{$oUserCurrent->getUserWebPath()}"><i class="ico-userprofile"></i> {$aLang.footer_menu_user_profile}</a></li>
 				  <li class="item-settings"><a href="{router page='settings'}profile/"><i class="ico-settings"></i> {$aLang.user_settings}</a></li>
 				  <li class="item-create"><a href="{router page='topic'}add/"><i class="ico-file"></i> {$aLang.block_create}</a></li>
