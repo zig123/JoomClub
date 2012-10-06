@@ -45,9 +45,9 @@
 
 			{if $oComment->getTargetType() != 'talk'}
 				<li id="vote_area_comment_{$oComment->getId()}" class="vote{if $oComment->getRating() > 0} vote-count-positive{elseif $oComment->getRating() < 0} vote-count-negative{/if}{if (strtotime($oComment->getDate()) < $smarty.now - $oConfig->GetValue('acl.vote.comment.limit_time') && !$oVote) || ($oUserCurrent && $oUserCurrent->getId() == $oUser->getId())} vote-expired{/if}{if $oVote} voted{if $oVote->getDirection() > 0} voted-up{else} voted-down{/if}{/if}">
-					<div class="vote-item vote-down" onclick="return ls.vote.vote({$oComment->getId()},this,-1,'comment');"><i class="ico-down"></i></div>
+					<div class="vote-item vote-down" onclick="return ls.vote.vote({$oComment->getId()},this,-1,'comment');" title="{$aLang.topic_vote_down}"><i class="ico-down"></i></div>
 					<span class="vote-count" id="vote_total_comment_{$oComment->getId()}">{if $oComment->getRating() > 0}+{/if}{$oComment->getRating()}</span>
-					<div class="vote-item vote-up" onclick="return ls.vote.vote({$oComment->getId()},this,1,'comment');"><i class="ico-up"></i></div>
+					<div class="vote-item vote-up" onclick="return ls.vote.vote({$oComment->getId()},this,1,'comment');" title="{$aLang.topic_vote_up}"><i class="ico-up"></i></div>
 				</li>
 			{/if}
 

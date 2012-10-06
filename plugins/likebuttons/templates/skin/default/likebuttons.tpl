@@ -1,15 +1,15 @@
 {*{debug}*}
 
 <div class="likes-block">
-    <a href="?hash=event_{$oTopic->getId()}" class="like l-fb">
+    <a href="?hash=event_{$oTopic->getId()}" class="like l-fb" title="{$aLang.plugin.likebuttons.like_fb}">
         <i class="l-ico"></i>
         <span class="l-count"></span>
     </a>
-    <a href="?hash=event_{$oTopic->getId()}" class="like l-vk">
+    <a href="?hash=event_{$oTopic->getId()}" class="like l-vk" title="{$aLang.plugin.likebuttons.like_vk}">
         <i class="l-ico"></i>
         <span class="l-count"></span>
     </a>
-    <a href="?hash=event_{$oTopic->getId()}" class="like l-tw">
+    <a href="?hash=event_{$oTopic->getId()}" class="like l-tw" title="{$aLang.plugin.likebuttons.like_tw}">
         <i class="l-ico"></i>
         <span class="l-count"></span>
     </a>

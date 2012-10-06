@@ -102,7 +102,7 @@
 																	{/if}
 
 																	{if $bVoteInfoShow}js-infobox-vote-topic{/if}">
-					<div class="vote-item vote-down" onclick="return ls.vote.vote({$oTopic->getId()},this,-1,'topic');"><span><i class="ico-down"></i></span></div>
+					<div class="vote-item vote-down" onclick="return ls.vote.vote({$oTopic->getId()},this,-1,'topic');" title="{$aLang.topic_vote_down}"><span><i class="ico-down"></i></span></div>
 					<div class="vote-item vote-count" title="{$aLang.topic_vote_count}: {$oTopic->getCountVote()}">
 						<span id="vote_total_topic_{$oTopic->getId()}">
 							{if $bVoteInfoShow}
@@ -112,7 +112,7 @@
 							{/if}
 						</span>
 					</div>
-					<div class="vote-item vote-up" onclick="return ls.vote.vote({$oTopic->getId()},this,1,'topic');"><span><i class="ico-up"></i></span></div>
+					<div class="vote-item vote-up" onclick="return ls.vote.vote({$oTopic->getId()},this,1,'topic');" title="{$aLang.topic_vote_up}"><span><i class="ico-up"></i></span></div>
 					{if $bVoteInfoShow}
 						<div id="vote-info-topic-{$oTopic->getId()}" style="display: none;">
 							<ul class="vote-topic-info">
