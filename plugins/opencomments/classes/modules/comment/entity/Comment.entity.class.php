@@ -10,10 +10,10 @@
 class PluginOpencomments_ModuleComment_EntityComment extends PluginOpencomments_Inherit_ModuleComment_EntityComment 
 { 
     public function getGuestName() {
-        return $this->_aData['guest_name'];
+        return (!empty($this->_aData['guest_name'])) ? $this->_aData['guest_name'] : '';
     }
     public function getGuestEmail() {
-        return $this->_aData['guest_email'];
+        return (!empty($this->_aData['guest_email'])) ? $this->_aData['guest_email'] : '';
     }
     
     public function setGuestName($data) {
