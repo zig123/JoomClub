@@ -14,18 +14,20 @@ $config['files_dir'] = '___path.root.server___/uploads/files';
 //структура url для файлов
 //где random2 - это случ. число от 0 до 99.
 //random6 - это случ. число от 0 до 999999.
-$config['files_url'] = array('login','year','month','day','random2');
+$config['files_url'] = array('login');
 
 //пути для загрузки картинок
 $config['images_dir'] = '___path.root.server___/uploads/images';
 //структура url для картинок
-$config['images_url'] = array('login','year','month','day','random2');
+$config['images_url'] = array('login','year','month');
+//корневая папка пользователя
+$config['images_url_root'] = array('login');
 
 //максимально допустимые размеры файлов и картинок в кб
 $config['max_size'] = 3000; 
 
 //разрешенные типы файлов для загрузки
-$config['allow_ext'] = array ('doc','txt', 'rtf', 'ppt', 'pdf', 'jpg', 'png', 'PNG', 'JPG', 'GIF', 'gif');
+$config['allow_ext'] = array ('zip','ZIP','doc','txt', 'rtf', 'ppt', 'pdf', 'jpg', 'png', 'PNG', 'JPG', 'GIF', 'gif');
 
 // на каких страницах производить замену стандартного редактора.
 $config['use_for'] = array ('topic', 'talk','question','link','photoset');

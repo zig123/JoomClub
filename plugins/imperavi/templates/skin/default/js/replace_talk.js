@@ -31,16 +31,16 @@ $(document).ready(function() {
 	if ($('#talk_text').attr('id') != undefined) {
 
 		$('#talk_text').redactor({
-											lang			: 'ru',
-											focus			: true,
-											removeStyles	: true,
-											removeClasses	: false,
-											convertDivs		: false,
-											convertLinks	: true,
-											imageUpload		: DIR_WEB_ROOT+'/imperavi/upload_img/', 
-											fileUpload		: DIR_WEB_ROOT+'/imperavi/upload_files/',
-											buttons 		: ['html', '|', 'formatting', '|', 'bold', 'italic', 'deleted','underline', '|','unorderedlist', 'orderedlist', '|',
-		  														'image', 'video', 'file', 'table', 'link', '|','horizontalrule', 'fullscreen']
+			lang			: 'ru',
+			focus			: true,
+			removeStyles	: true,
+			removeClasses	: false,
+			convertDivs		: false,
+			convertLinks	: true,
+			imageUpload		: DIR_WEB_ROOT+'/imperavi/upload_img/',
+			fileUpload		: DIR_WEB_ROOT+'/imperavi/upload_files/',
+			buttons 		: ['html', '|', 'formatting', '|', 'bold', 'italic', 'deleted','underline', '|','unorderedlist', 'orderedlist', '|',
+		  						'image', 'video', 'file', 'table', 'link', '|','horizontalrule']
 		});
 
 		$('#talk_text').execCommand('inserthtml','<p>&nbsp</p>');

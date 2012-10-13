@@ -38,7 +38,8 @@ class PluginImperavi_ActionImperavi extends ActionPlugin {
 		//добавляем обработчики событий для загрузки файлов и для загрузки изображений
 		$this->AddEvent('upload_files','EventUploadFiles');
 		$this->AddEvent('upload_img','EventUploadImg');		
-		
+		$this->AddEvent('json_load_img','EventJsonLoadImg');
+
 	}
 
 	/**
@@ -179,7 +180,70 @@ class PluginImperavi_ActionImperavi extends ActionPlugin {
 		}
 			
 	}
+	/**
+	 * Загрузка изображений на сайт
+	 *
+	 * @return false
+	 */
+	protected function EventJsonLoadImg() {
 
+		if (!$this->User_IsAuthorization()) {
+
+            $this->Message_AddErrorSingle($this->Lang_Get('not_access'), $this->Lang_Get('error'));
+
+            return false;
+
+        }
+
+        $arrImagesUrl = Config::Get('plugin.imperavi.images_url_root');
+
+        if (empty($arrImagesUrl)) {
+
+            $arrResp = array('error_id' => 8);//images_url is empty
+            $this->Viewer_Assign('sErrImperaviMsg', stripslashes(json_encode($arrResp)));
+
+            return false;
+
+        }
+
+        $sUrlStruct = $this->get_url_struct($arrImagesUrl);
+        $sDest = Config::Get('path.root.server').'/uploads/images/'.$sUrlStruct;
+
+        $fileArray = array();
+        $this->readDirRf($sDest, $fileArray, $sDest);
+
+
+
+        $html = array();
+        foreach($fileArray as $file){
+            $html[] = '{ "image": "'.$file['file'].'", "title": "'.$file['title'].'", "folder": "'.$file['dir'].'" }'."\n";
+        }
+        echo "[\n".implode(',', $html)."\n]";
+        exit;
+	}
+
+    private function readDirRf($dirName, &$fileArray, $root) {
+
+        //$dirName = $this->get_url_struct();
+
+        if ($handle = opendir($dirName)) {
+
+            while (false !== ($file = readdir($handle))) {
+                if ($file != '.' && $file != '..') {
+                    if (is_dir($dirName . '/' . $file)) {
+                        $this->readDirRf($dirName . '/' . $file, $fileArray, $root);
+
+                    } elseif (is_file($dirName . '/' . $file)) {
+                        $dName = str_replace(Config::Get('path.root.server'), '', $dirName);
+                        $dir  =  substr(str_replace($root, '', $dirName), 1);
+                        $filePath = str_replace('//','/', $dName .'/'. $file);
+                        $fileArray[] = array('dir'=> str_replace('/', ' > ', $dir), 'file'=> $filePath, 'title'=> $file);
+                    }
+                }
+            }
+            closedir($handle);
+        }
+    }
 	/**
 	 * Загрузка файлов на сайт
 	 *
